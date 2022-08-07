@@ -108,5 +108,5 @@ void Estadisticos::resetResultado()
 {
   resultado.str(std::string());
   resultado.clear();
-  //resultado.flush();
+  resultado.flush();
 }

@@ -2,9 +2,9 @@
 #define LEER_H
 #include <fstream>
 #include <string>
-#include <sstream>
-#include <vector>
-#include <iostream>
+//#include <sstream>
+//#include <vector>
+//#include <iostream>
 
 class Leer
 {

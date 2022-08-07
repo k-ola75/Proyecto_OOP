@@ -31,15 +31,10 @@ void Control::setStrDatos()
 void Control::toVector()
 {
   int idx;
-  int index = 0;
-  vectDatos.resize(1048576);//preguntar Problema si no se "inicializa" un tamaño
   while(strDatos >> idx)
   {
-    //vectDatos.assign(1,idx); //¿Usar iterador?
-    vectDatos[index] = idx;
-    ++index;
+    vectDatos.push_back(idx);
   }
-  vectDatos.resize(index);
 }
 
 void Control::calcularParametro()
@@ -62,10 +57,29 @@ void Control::reset()
 {
   parametro.clear();
   vectDatos.clear();
+  strDatos.clear();
   objEst.resetResultado();
 }
 
 int Control::getMediciones()
 {
   return numeroMediciones;
+}
+
+void Control::getVector()
+{
+  for (auto i:vectDatos)
+  {
+    std::cout<< i << std::endl;
+  }
+}
+
+void Control::getStrDatos()
+{
+  std::cout << strDatos.str() << std::endl;
+}
+
+void Control::getParametro()
+{
+  std::cout << parametro << std::endl;
 }

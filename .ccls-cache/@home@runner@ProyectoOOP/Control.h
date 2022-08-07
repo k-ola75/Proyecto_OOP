@@ -26,9 +26,9 @@ public:
   void llamarPersistencia(std::string nombre);
   void reset();
   int getMediciones();
-  std::string getParametro(); //quizas innecesario
-  std::string getStrDatos(); //quizas innecesario
-  std::vector<int> getVector(); //quizas innecesario
+  void getParametro(); //quizas innecesario
+  void getStrDatos(); //quizas innecesario
+  void getVector();
 
 };
 
