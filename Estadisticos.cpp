@@ -1,5 +1,9 @@
 #include "Estadisticos.h"
 
+/**
+ * Ordena datos de un vector en orden ascendente
+ * @param vect vector que contiene los datos a ordenar
+ */
 void Estadisticos::OA(std::vector<int> &vect)
 {
   sort(vect.begin(), vect.end());
@@ -10,6 +14,10 @@ void Estadisticos::OA(std::vector<int> &vect)
   }
 }
 
+/**
+ * Ordena datos de un vector en orden descendente
+ * @param vect vector que contiene los datos a ordenar
+ */
 void Estadisticos::OD(std::vector<int>& vect)
 {
   sort(vect.begin(), vect.end(), std::greater<int>());
@@ -20,6 +28,10 @@ void Estadisticos::OD(std::vector<int>& vect)
   }
 }
 
+/**
+ * Calcula valor mínimo de datos contenidos en un vector
+ * @param vect vector que contiene los datos
+ */
 void Estadisticos::MN(std::vector<int>& vect)
 {
   int index = 0;
@@ -33,6 +45,10 @@ void Estadisticos::MN(std::vector<int>& vect)
   resultado << "Valor minimo: " << min << ", Posicion: " << minIndex;
 }
 
+/**
+ * Calcula valor máximo de datos contenidos en un vector
+ * @param vect vector que contiene los datos
+ */
 void Estadisticos::MY(std::vector<int>& vect)
 {
   int index = 0;
@@ -47,6 +63,10 @@ void Estadisticos::MY(std::vector<int>& vect)
   resultado << "Valor maximo: " << max << ", Posicion: " << maxIndex;
 }
 
+/**
+ * Calcula la moda de datos contenidos en un vector
+ * @param vect vector que contiene los datos
+ */
 void Estadisticos::MO(std::vector<int>& vect)
 {
   int freq;
@@ -63,9 +83,13 @@ void Estadisticos::MO(std::vector<int>& vect)
   {
   resultado << "Moda: " << moda;
   }
-  else{resultado << "N.A";}
+  else{resultado << "Moda: N.A";}
 }
 
+/**
+ * Calcula mediana de datos contenidos en un vector
+ * @param vect vector que contiene los datos
+ */
 void Estadisticos::MD(std::vector<int>& vect)
 {
   double mediana;
@@ -87,6 +111,10 @@ void Estadisticos::MD(std::vector<int>& vect)
   resultado << "Mediana: " << mediana;
 }
 
+/**
+ * Calcula media de datos contenidos en un vector
+ * @param vect vector que contiene los datos
+ */
 void Estadisticos::MA(std::vector<int>& vect)
 {
   int idy = 0;
@@ -99,11 +127,17 @@ void Estadisticos::MA(std::vector<int>& vect)
   resultado << "Media: " << media;
 }
 
+/**
+ * Retorna cadena de texto de atributo de dato "resultado"
+ */
 std::string Estadisticos::getResultado()
 {
   return resultado.str();
 }
 
+/**
+ * Borra el contenido del atributo "resultado" y limpia todas las banderas de error.
+ */
 void Estadisticos::resetResultado()
 {
   resultado.str(std::string());

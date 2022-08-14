@@ -1,8 +1,3 @@
-
-0,0,2,7,8,12,36,96,524
 524,96,36,12,8,7,2,0,0
-Valor minimo: 0, Posicion: 7
-Valor maximo: 524, Posicion: 1
-N.A
-Mediana: 8
-Media: 76.1111
+Moda: 88
+Valor maximo: 98, Posicion: 5

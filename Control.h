@@ -3,7 +3,6 @@
 #include "Estadisticos.h"
 #include "Persistencia.h"
 #include "Leer.h"
-#include <map>
 
 class Control
 {
@@ -26,10 +25,6 @@ public:
   void llamarPersistencia(std::string nombre);
   void reset();
   int getMediciones();
-  void getParametro(); //quizas innecesario
-  void getStrDatos(); //quizas innecesario
-  void getVector();
-
 };
 
 #endif

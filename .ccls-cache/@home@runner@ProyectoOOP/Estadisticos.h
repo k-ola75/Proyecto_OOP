@@ -21,9 +21,6 @@ public:
   void MA(std::vector<int>& vect);
   std::string getResultado();
   void resetResultado();
-  
 };
-
-
 
 #endif

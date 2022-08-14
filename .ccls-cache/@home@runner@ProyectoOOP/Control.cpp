@@ -3,9 +3,15 @@
 Control::Control(std::string nombre)
 {
   archivoEntrada.open(nombre);
+  if (archivoEntrada.fail())
+  {
+			std::cerr << "Error al abrir el archivo de entrada" << std::endl;
+			exit(1);
+	}
   parametro = "";
   numeroMediciones = 0;
 }
+
 Control::~Control()
 {
   archivoEntrada.close();
@@ -64,22 +70,4 @@ void Control::reset()
 int Control::getMediciones()
 {
   return numeroMediciones;
-}
-
-void Control::getVector()
-{
-  for (auto i:vectDatos)
-  {
-    std::cout<< i << std::endl;
-  }
-}
-
-void Control::getStrDatos()
-{
-  std::cout << strDatos.str() << std::endl;
-}
-
-void Control::getParametro()
-{
-  std::cout << parametro << std::endl;
 }
